@@ -22,6 +22,7 @@ namespace Binarytree
             binarytreeList.Insert(65);
             binarytreeList.Insert(63);
             binarytreeList.Insert(67);
+            binarytreeList.Find(63);
 
         }
     }

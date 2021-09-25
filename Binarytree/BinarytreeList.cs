@@ -34,5 +34,22 @@ namespace Binarytree
             }
             return this.root;
         }
+        public void Find(int value)
+        {
+            Console.WriteLine(Search(this.root, value));
+        }
+        public bool Search(Node<Gtype> root,int val)
+        {
+            while (root != null)
+            {
+                if (root.Data == val)
+                    return true;
+                if (root.Data > val)
+                    return Search(root.Pre, val);
+                if(root.Data < val)
+                    return Search(root.Next, val);
+            }
+            return true;
+        }
     }
 }
